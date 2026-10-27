@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Maison des Chiens — Élevage et vente de chiots à Kinshasa</title>
+  <meta name="description" content="La Maison des Chiens, élevage familial à Kinshasa. Chiots en bonne santé, vaccinés et bien socialisés. Berger Allemand, Golden, Labrador, Husky et plus.">
+  <meta property="og:title" content="La Maison des Chiens — Chiots à Kinshasa">
+  <meta property="og:description" content="Trouvez le compagnon qui vous ressemble. Élevage familial, suivi vétérinaire, livraison à Kinshasa.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐾</text></svg>">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a href="#main" class="skip-link">Aller au contenu principal</a>
+
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a href="#accueil" class="logo" aria-label="Accueil — La Maison des Chiens">
+        <svg class="logo-paw" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <ellipse cx="6" cy="8" rx="2" ry="2.6"/>
+          <ellipse cx="10" cy="5" rx="2" ry="2.6"/>
+          <ellipse cx="14" cy="5" rx="2" ry="2.6"/>
+          <ellipse cx="18" cy="8" rx="2" ry="2.6"/>
+          <path d="M12 10c-3 0-6 3-6 6.5 0 2 1.5 3.5 3.5 3.5 1 0 1.8-.4 2.5-1 .7.6 1.5 1 2.5 1 2 0 3.5-1.5 3.5-3.5 0-3.5-3-6.5-6-6.5z"/>
+        </svg>
+        <span>La Maison des Chiens</span>
+      </a>
+
+      <nav class="nav" aria-label="Navigation principale">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Ouvrir le menu">
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </button>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="#accueil" class="nav-link">Accueil</a></li>
+          <li><a href="#chiens" class="nav-link">Nos chiens</a></li>
+          <li><a href="#maison" class="nav-link">La maison</a></li>
+          <li><a href="#avis" class="nav-link">Avis</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+          <li><a href="#contact" class="btn btn-primary nav-cta">Réserver un chiot</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- HERO -->
+    <section id="accueil" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text reveal">
+          <p class="eyebrow">Élevage familial à Kinshasa · Depuis 2016</p>
+          <h1>Trouvez le compagnon qui vous ressemble</h1>
+          <p class="hero-sub">Des chiots en bonne santé, bien socialisés, élevés dans une famille aimante. Transparence totale sur la santé, les origines et le suivi.</p>
+          <div class="hero-actions">
+            <a href="#chiens" class="btn btn-primary">Voir les chiots disponibles</a>
+            <a href="#contact" class="btn btn-outline">Nous contacter</a>
+          </div>
+          <ul class="hero-badges" role="list">
+            <li><span aria-hidden="true">✔</span> Vaccins à jour</li>
+            <li><span aria-hidden="true">✔</span> Suivi vétérinaire</li>
+            <li><span aria-hidden="true">✔</span> Livraison à Kinshasa</li>
+          </ul>
+        </div>
+        <div class="hero-image reveal">
+          <img id="hero-img" src="" alt="Un chiot heureux de La Maison des Chiens" width="900" height="900">
+          <div class="hero-image-badge">
+            <strong>10 ans</strong>
+            <span>d'expérience</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NOS CHIENS -->
+    <section id="chiens" class="section dogs">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Nos chiots</p>
+          <h2>Nos chiens disponibles</h2>
+          <p class="section-sub">Chaque chiot a été vacciné, pucé et suivi par un vétérinaire. Filtrez par taille ou par race pour trouver le vôtre.</p>
+        </header>
+
+        <div class="filters reveal" role="group" aria-label="Filtrer les chiens">
+          <div class="filter-group">
+            <span class="filter-label">Taille</span>
+            <div class="filter-chips" role="group" aria-label="Filtrer par taille">
+              <button class="chip is-active" data-filter-size="all">Tous</button>
+              <button class="chip" data-filter-size="Petit">Petit</button>
+              <button class="chip" data-filter-size="Moyen">Moyen</button>
+              <button class="chip" data-filter-size="Grand">Grand</button>
+            </div>
+          </div>
+          <div class="filter-group">
+            <label class="filter-label" for="filter-breed">Race</label>
+            <select id="filter-breed" class="filter-select">
+              <option value="all">Toutes les races</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="dogs-grid" id="dogs-grid" aria-live="polite"></div>
+        <p class="dogs-empty" id="dogs-empty" hidden>Aucun chien ne correspond à votre recherche.</p>
+      </div>
+    </section>
+
+    <!-- LA MAISON -->
+    <section id="maison" class="section about">
+      <div class="container about-inner">
+        <div class="about-text reveal">
+          <p class="eyebrow">La maison</p>
+          <h2>Un élevage familial, pas une usine</h2>
+          <p>Nous sommes une famille passionnée de chiens, installée à Kinshasa depuis plus de dix ans. Nos chiots grandissent dans la maison, au contact des enfants, des bruits du quotidien et d'autres animaux. Résultat : des chiens équilibrés, sociables et prêts pour leur nouvelle vie.</p>
+          <p>Nous ne vendons pas « des chiots ». Nous confions un membre de la famille, avec un suivi à vie et des conseils honnêtes.</p>
+        </div>
+        <ul class="values" role="list">
+          <li class="value-card reveal">
+            <span class="value-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z"/><path d="m9 12 2 2 4-4"/></svg>
+            </span>
+            <h3>Santé certifiée</h3>
+            <p>Vaccins, vermifuges et certificats vétérinaires remis à chaque adoption.</p>
+          </li>
+          <li class="value-card reveal">
+            <span class="value-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v10h14V10"/></svg>
+            </span>
+            <h3>Élevage familial</h3>
+            <p>Les chiots grandissent dans la maison, pas dans un chenil.</p>
+          </li>
+          <li class="value-card reveal">
+            <span class="value-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.5-7 10-7 10Z"/></svg>
+            </span>
+            <h3>Socialisation précoce</h3>
+            <p>Enfants, bruits, voiture, autres chiens : tout est travaillé dès 3 semaines.</p>
+          </li>
+          <li class="value-card reveal">
+            <span class="value-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M21 21v-2a4 4 0 0 0-3-3.9"/></svg>
+            </span>
+            <h3>Accompagnement à vie</h3>
+            <p>Un appel, un message : nous restons disponibles pour toute la vie du chien.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- COMMENT ÇA MARCHE -->
+    <section id="etapes" class="section steps">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Comment ça marche</p>
+          <h2>Adopter en 4 étapes</h2>
+          <p class="section-sub">Un parcours simple, humain et sans mauvaise surprise.</p>
+        </header>
+        <ol class="steps-list" role="list">
+          <li class="step reveal">
+            <span class="step-num">1</span>
+            <h3>Choisir son chien</h3>
+            <p>Parcourez les fiches, comparez les races et les caractères.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step-num">2</span>
+            <h3>Prendre contact</h3>
+            <p>Appelez ou écrivez-nous : nous répondons sous 24h.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step-num">3</span>
+            <h3>Rencontrer le chiot</h3>
+            <p>Venez à la maison, ou faites-vous livrer à Kinshasa.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step-num">4</span>
+            <h3>Adopter</h3>
+            <p>Contrat, carnet de santé et conseils : tout est prêt.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- AVIS -->
+    <section id="avis" class="section testimonials">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Ils nous font confiance</p>
+          <h2>Avis des clients</h2>
+        </header>
+
+        <div class="carousel reveal" aria-roledescription="carrousel" aria-label="Témoignages clients">
+          <div class="carousel-viewport">
+            <ul class="carousel-track" id="carousel-track" role="list"></ul>
+          </div>
+          <div class="carousel-controls">
+            <button class="carousel-btn" id="carousel-prev" aria-label="Témoignage précédent">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+            </button>
+            <div class="carousel-dots" id="carousel-dots" role="tablist" aria-label="Choisir un témoignage"></div>
+            <button class="carousel-btn" id="carousel-next" aria-label="Témoignage suivant">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section faq">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Questions fréquentes</p>
+          <h2>Vous vous demandez…</h2>
+        </header>
+        <div class="accordion" id="accordion">
+          <div class="accordion-item">
+            <h3><button class="accordion-btn" aria-expanded="false">Les chiots sont-ils vaccinés ?<span class="accordion-icon" aria-hidden="true"></span></button></h3>
+            <div class="accordion-panel" role="region"><p>Oui. Chaque chiot reçoit ses premières vaccinations, est vermifugé et pucé avant l'adoption. Le carnet de santé vous est remis le jour du départ.</p></div>
+          </div>
+          <div class="accordion-item">
+            <h3><button class="accordion-btn" aria-expanded="false">Avez-vous des pedigree ?<span class="accordion-icon" aria-hidden="true"></span></button></h3>
+            <div class="accordion-panel" role="region"><p>Pour certaines races, oui. Nous vous fournissons les documents des parents. Pour les autres, nous restons transparents : pas de pedigree, mais des chiens en excellente santé.</p></div>
+          </div>
+          <div class="accordion-item">
+            <h3><button class="accordion-btn" aria-expanded="false">Livrez-vous à Kinshasa ?<span class="accordion-icon" aria-hidden="true"></span></button></h3>
+            <div class="accordion-panel" role="region"><p>Oui, nous livrons partout à Kinshasa. La livraison est offerte à partir de 30 km autour de notre élevage. Pour les autres zones, contactez-nous.</p></div>
+          </div>
+          <div class="accordion-item">
+            <h3><button class="accordion-btn" aria-expanded="false">Quels moyens de paiement acceptez-vous ?<span class="accordion-icon" aria-hidden="true"></span></button></h3>
+            <div class="accordion-panel" role="region"><p>Espèces, Mobile Money et virement bancaire. Un acompte de 30 % est demandé à la réservation, le solde le jour de l'adoption.</p></div>
+          </div>
+          <div class="accordion-item">
+            <h3><button class="accordion-btn" aria-expanded="false">Y a-t-il une garantie santé ?<span class="accordion-icon" aria-hidden="true"></span></button></h3>
+            <div class="accordion-panel" role="region"><p>Oui : 7 jours de garantie pour les maladies infectieuses détectées par un vétérinaire, et un accompagnement à vie pour tous les conseils d'éducation et de santé.</p></div>
+          </div>
+          <div class="accordion-item">
+            <h3><button class="accordion-btn" aria-expanded="false">Et si je ne peux plus garder le chien ?<span class="accordion-icon" aria-hidden="true"></span></button></h3>
+            <div class="accordion-panel" role="region"><p>Nous ne laissons jamais un chien de la maison dans la rue. Contactez-nous : nous vous aidons à lui trouver une nouvelle famille, ou nous le reprenons.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+   <!-- CONTACT -->
+    <section id="contact" class="section contact">
+      <div class="container contact-inner">
+        <div class="contact-info reveal">
+          <p class="eyebrow">Contact</p>
+          <h2>Parlons de votre futur compagnon</h2>
+          <p>Une question sur un chiot, une race, une livraison ? Écrivez-nous, nous répondons sous 24h.</p>
+          <ul class="contact-list" role="list">
+            <li>
+              <span class="contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              </span>
+              <div><strong>Adresse</strong><br>Av. des Chiens, Gombe, Kinshasa</div>
+            </li>
+            <li>
+              <span class="contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.6a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.5-1.2a2 2 0 0 1 2.1-.5c.8.3 1.7.6 2.6.7a2 2 0 0 1 1.7 2Z"/></svg>
+              </span>
+              <div><strong>Téléphone / WhatsApp</strong><br>+243 000 000 000</div>
+            </li>
+            <li>
+              <span class="contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+              </span>
+              <div><strong>Horaires</strong><br>Lun–Sam · 9h à 18h · Dim sur rendez-vous</div>
+            </li>
+          </ul>
+          <div class="map-placeholder" aria-label="Carte de localisation (décorative)">
+            <span aria-hidden="true">📍 Gombe, Kinshasa</span>
+          </div>
+        </div>
+
+        <form class="contact-form reveal" id="contact-form" novalidate>
+          <div class="field">
+            <label for="name">Nom complet</label>
+            <input type="text" id="name" name="name" autocomplete="name" required>
+            <p class="field-error" id="name-error" hidden>Merci d'indiquer votre nom (2 caractères min.).</p>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" required>
+            <p class="field-error" id="email-error" hidden>Merci d'indiquer un email valide.</p>
+          </div>
+          <div class="field">
+            <label for="phone">Téléphone</label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel" required>
+            <p class="field-error" id="phone-error" hidden>Merci d'indiquer un numéro valide (8 chiffres min.).</p>
+          </div>
+          <div class="field">
+            <label for="breed">Race souhaitée</label>
+            <select id="breed" name="breed">
+              <option value="">— Indifférent —</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            <p class="field-error" id="message-error" hidden>Merci d'écrire un message (10 caractères min.).</p>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Envoyer le message</button>
+          <p class="form-success" id="form-success" hidden>Merci ! Votre message a bien été envoyé. Nous vous répondons sous 24h.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="#accueil" class="logo logo-footer">
+          <svg class="logo-paw" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <ellipse cx="6" cy="8" rx="2" ry="2.6"/><ellipse cx="10" cy="5" rx="2" ry="2.6"/>
+            <ellipse cx="14" cy="5" rx="2" ry="2.6"/><ellipse cx="18" cy="8" rx="2" ry="2.6"/>
+            <path d="M12 10c-3 0-6 3-6 6.5 0 2 1.5 3.5 3.5 3.5 1 0 1.8-.4 2.5-1 .7.6 1.5 1 2.5 1 2 0 3.5-1.5 3.5-3.5 0-3.5-3-6.5-6-6.5z"/>
+          </svg>
+          <span>La Maison des Chiens</span>
+        </a>
+        <p>Des chiots heureux, des familles comblées. Depuis 2016 à Kinshasa.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Liens rapides">
+        <h3>Liens rapides</h3>
+        <ul role="list">
+          <li><a href="#chiens">Nos chiens</a></li>
+          <li><a href="#maison">La maison</a></li>
+          <li><a href="#avis">Avis</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="footer-social">
+        <h3>Suivez-nous</h3>
+        <ul class="social-links" role="list">
+          <li><a href="#" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13 22v-8h3l1-4h-4V8c0-1.1.3-2 2-2h2V2.5C16.5 2.4 15.4 2 14 2c-3 0-5 1.8-5 5.2V10H6v4h3v8h4Z"/></svg>
+          </a></li>
+          <li><a href="#" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          </a></li>
+          <li><a href="#" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 21l2.1-5.4A8.5 8.5 0 1 1 21 11.5Z"/></svg>
+          </a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© 2026 La Maison des Chiens — Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="back-to-top" aria-label="Retour en haut" hidden>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 15 6-6 6 6"/></svg>
+  </button>
+
+  <!-- MODAL -->
+  <div class="modal" id="dog-modal" role="dialog" aria-modal="true" aria-labelledby="dog-modal-title" hidden>
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-content" role="document">
+      <button class="modal-close" id="modal-close" aria-label="Fermer la fiche">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+      <div class="modal-media">
+        <img id="dog-modal-img" src="" alt="">
+      </div>
+      <div class="modal-body">
+        <div class="modal-head">
+          <h2 id="dog-modal-title"></h2>
+          <span class="dog-price" id="dog-modal-price"></span>
+        </div>
+        <p class="dog-meta" id="dog-modal-meta"></p>
+        <p id="dog-modal-desc"></p>
+        <div class="modal-health">
+          <strong>Santé</strong>
+          <p id="dog-modal-health"></p>
+        </div>
+        <a href="#contact" class="btn btn-primary btn-block" data-close-modal>Réserver ce chiot</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
